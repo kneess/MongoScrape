@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="col-12">
+    <div class="jumbotron">
+      <center>
+        <h1 class="display-4">Pocket-lint Scraper</h1>
+      </center>
+      <hr class="my-4">
+      <p class="lead">
+        <form action="/scrape" method="POST">
+          <center>
+            <button class="btn btn-primary btn-lg" id="scrape" role="button">Scrape</button>
+          </center>
+        </form>
+      </p>
+    </div>
+  </div>
+  </div>
+  <ul>
+      {{#each articles}}
+  <div class="container">
+  <div class="col-12">
+    <div id="{{_id}}">
+        <div id="title">
+          {{title}}
+        </div>
+        <br>
+      <div id="summary">
+        {{summary}}
+      </div>
+        
+      <br>
+      <div="link">
+          <a href="https://www.pocket-lint.com{{link}}">Click here for the full article</a>
+      </div>
+      <button id="saveArticle" data-id="{{_id}}">Save Article</button>
+      </div>
+</div>
+  </div>
+  {{/each}}
+  </ul>
